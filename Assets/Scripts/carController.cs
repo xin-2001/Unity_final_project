@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class carController : MonoBehaviour
 {
     public int currentLocation = 0;
+
     public float forwardSpeed; // 向前移動的速度
     public float diagonalSpeed; // 斜向移動的速度
     public float diagonaldebuff; //斜向移動補正
@@ -102,4 +104,5 @@ public class carController : MonoBehaviour
         // 完成斜向移動，回正為向前旋轉
         isMovingDiagonal = false;
     }
+
 }
