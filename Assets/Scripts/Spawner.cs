@@ -30,7 +30,7 @@ public class Spawner : MonoBehaviour
 
         _elapsedTime += Time.deltaTime;
 
-        if(_elapsedTime >= _stayTime * 5)
+        if(_elapsedTime >= _stayTime * 3)
         {
             _elapsedTime = 0;
             _isSpawmed = false;
