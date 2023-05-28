@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test_Spawner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     [Header("Levels")]
     [SerializeField] private GameObject[] _levels;
@@ -19,7 +19,7 @@ public class Test_Spawner : MonoBehaviour
         int randomIndex = Random.Range(0, _levels.Length);
         GameObject level = Instantiate(_levels[randomIndex], transform.position, transform.rotation) as GameObject;
 
-        // level.name = level.name.Replace("(Clone)", "").Trim();
+        level.name = level.name.Replace("(Clone)", "").Trim();
 
         _isSpawmed = true;
     }
