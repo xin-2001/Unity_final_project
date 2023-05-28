@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test_Spawner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     [Header("Levels")]
     [SerializeField] private GameObject[] _levels;
