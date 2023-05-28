@@ -6,6 +6,7 @@ public class carController : MonoBehaviour
 {
     public float forwardSpeed; // 向前移動的速度
     public float diagonalSpeed; // 斜向移動的速度
+    public float diagonaldebuff; //斜向移動補正
     public float rotationSpeed; // 回正的旋轉速度
 
     private bool isMovingDiagonal = false; // 是否正在進行斜向移動
@@ -18,7 +19,7 @@ public class carController : MonoBehaviour
         {
             // 開始斜向移動
             isMovingDiagonal = true;
-            targetPosition = transform.position + transform.TransformDirection(Vector3.forward + Vector3.left).normalized * diagonalSpeed;
+            targetPosition = transform.position + transform.TransformDirection(Vector3.forward + Vector3.left).normalized * diagonalSpeed * diagonaldebuff;
             targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
             StartCoroutine(MoveDiagonal());
         }
@@ -27,7 +28,7 @@ public class carController : MonoBehaviour
         {
             // 開始斜向移動
             isMovingDiagonal = true;
-            targetPosition = transform.position + transform.TransformDirection(Vector3.forward + Vector3.right).normalized * diagonalSpeed;
+            targetPosition = transform.position + transform.TransformDirection(Vector3.forward + Vector3.right).normalized * diagonalSpeed * diagonaldebuff;
             targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
             StartCoroutine(MoveDiagonal());
         }
@@ -39,7 +40,7 @@ public class carController : MonoBehaviour
         }
     }
 
-    private System.Collections.IEnumerator MoveDiagonal()
+    private IEnumerator MoveDiagonal()
     {
         float elapsedTime = 0f;
         float duration = 0.1f; // 斜向移動持續時間
@@ -61,7 +62,6 @@ public class carController : MonoBehaviour
         elapsedTime = 0f;
         while (elapsedTime < duration)
         {
-            //Debug.Log("1");
             elapsedTime += Time.deltaTime;
 
             // 斜向移動
