@@ -9,9 +9,10 @@ public class TriggerVolume : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out Test_CharacterMovement player))
+        if (other.TryGetComponent(out carController player))
         {
             OnEnter.Invoke(player.gameObject);
+            Debug.Log(other.gameObject);
         }
     }
 }

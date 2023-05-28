@@ -14,9 +14,16 @@ public class carController : MonoBehaviour
     private Vector3 targetPosition; // 目標位置
     private Quaternion targetRotation; // 目標旋轉
 
+    private CharacterController _characterController;
+    private void Start()
+    {
+        //_characterController = GetComponent<CharacterController>();
+    }
     private void Update()
     {
-        Debug.Log(currentLocation);
+        // debug
+        //Debug.Log(currentLocation);
+        // debug
         if (currentLocation < 2 && currentLocation > -2)
         {
             if (Input.GetKeyDown(KeyCode.A) && !isMovingDiagonal)
