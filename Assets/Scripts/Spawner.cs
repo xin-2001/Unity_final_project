@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour
 {
     [Header("Levels")]
     [SerializeField] private GameObject[] _levels;
-    [SerializeField] private float _stayTime = 500f;
+    [SerializeField] private float _stayTime = 15f; //修改前 500f
 
     // private
     private bool _isSpawmed;
@@ -30,7 +30,7 @@ public class Spawner : MonoBehaviour
 
         _elapsedTime += Time.deltaTime;
 
-        if(_elapsedTime >= _stayTime * 3)
+        if(_elapsedTime >= _stayTime) // 修改前 _stayTime * 3
         {
             _elapsedTime = 0;
             _isSpawmed = false;
