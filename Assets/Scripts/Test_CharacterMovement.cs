@@ -26,9 +26,17 @@ public class Test_CharacterMovement : MonoBehaviour
     }*/
     private void Moveto()
 	{   
-        if (Input.GetKey("d"))
+        if (Input.GetKey("w"))
         {
             this.gameObject.transform.Translate(new Vector3(0, 0, 5)* Time.deltaTime );
+        }  //此類別.這個物件.座標系統.位移(delta向量)
+        if (Input.GetKey("a"))
+        {
+            this.gameObject.transform.Translate(new Vector3(-5, 0, 0)* Time.deltaTime );
+        }  //此類別.這個物件.座標系統.位移(delta向量)
+        if (Input.GetKey("d"))
+        {
+            this.gameObject.transform.Translate(new Vector3(5, 0, 0)* Time.deltaTime );
         }  //此類別.這個物件.座標系統.位移(delta向量)
     }
     private void Update()
