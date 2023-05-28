@@ -640,6 +640,7 @@ GameObject:
   - component: {fileID: 8105867391298666264}
   - component: {fileID: 8105867391298666262}
   - component: {fileID: 8105867391298666265}
+  - component: {fileID: 8106725892381818780}
   m_Layer: 0
   m_Name: paved road straight (1)
   m_TagString: Untagged
@@ -712,6 +713,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8106725892381818780
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8105867391298666267}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9, y: 2.2705686, z: 9}
+  m_Center: {x: 0, y: 1.1352843, z: 0}
 --- !u!1 &8105867391367263221
 GameObject:
   m_ObjectHideFlags: 0
