@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class carController : MonoBehaviour
 {
+    public int currentLocation = 0;
     public float forwardSpeed; // 向前移動的速度
     public float diagonalSpeed; // 斜向移動的速度
     public float diagonaldebuff; //斜向移動補正
@@ -15,28 +16,47 @@ public class carController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A) && !isMovingDiagonal)
+        Debug.Log(currentLocation);
+        if (currentLocation < 2 && currentLocation > -2)
         {
-            // 開始斜向移動
-            isMovingDiagonal = true;
-            targetPosition = transform.position + transform.TransformDirection(Vector3.forward + Vector3.left).normalized * diagonalSpeed * diagonaldebuff;
-            targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
-            StartCoroutine(MoveDiagonal());
-        }
+            if (Input.GetKeyDown(KeyCode.A) && !isMovingDiagonal)
+            {
+                // 開始斜向移動
+                isMovingDiagonal = true;
+                targetPosition = transform.position + transform.TransformDirection(Vector3.forward + Vector3.left).normalized * diagonalSpeed * diagonaldebuff;
+                targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
+                StartCoroutine(MoveDiagonal());
 
-        if (Input.GetKeyDown(KeyCode.D) && !isMovingDiagonal)
-        {
-            // 開始斜向移動
-            isMovingDiagonal = true;
-            targetPosition = transform.position + transform.TransformDirection(Vector3.forward + Vector3.right).normalized * diagonalSpeed * diagonaldebuff;
-            targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
-            StartCoroutine(MoveDiagonal());
-        }
+                currentLocation = currentLocation - 1;
+            }
 
-        if (!isMovingDiagonal)
+            if (Input.GetKeyDown(KeyCode.D) && !isMovingDiagonal)
+            {
+                // 開始斜向移動
+                isMovingDiagonal = true;
+                targetPosition = transform.position + transform.TransformDirection(Vector3.forward + Vector3.right).normalized * diagonalSpeed * diagonaldebuff;
+                targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
+                StartCoroutine(MoveDiagonal());
+
+                currentLocation = currentLocation + 1;
+            }
+
+            if (!isMovingDiagonal)
+            {
+                // 向前移動
+                transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
+            }
+        }
+        else
         {
-            // 向前移動
-            transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
+            if (currentLocation >= 2)
+            {
+                //撞到右邊的牆壁
+            }
+            else if (currentLocation <= -2)
+            {
+                //撞到左邊的牆壁
+            }
         }
     }
 
