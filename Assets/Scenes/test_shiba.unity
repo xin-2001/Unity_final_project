@@ -5971,11 +5971,15 @@ MonoBehaviour:
   - {fileID: 1622946316}
   spawnTime: 2.5
   Items:
-  - {fileID: 4797574586157328424, guid: 918ff4d74d26d6148985d2c3244fe206, type: 3}
+  - {fileID: 1262384884227154960, guid: 918ff4d74d26d6148985d2c3244fe206, type: 3}
   - {fileID: 1566069620469787416, guid: 064fdd8f0d0c5704b8ae2fcd3ac2d54d, type: 3}
   - {fileID: 5125798650009219208, guid: 4a30d21ad5b9db44ea40e56b1fad3c45, type: 3}
   - {fileID: 5591552218427095713, guid: 964b2060330052147a278b57c7e915c8, type: 3}
   - {fileID: 5435876812515929069, guid: 33f8c32c63733984cb46e5c2b25a61ff, type: 3}
+  - {fileID: 514719912366412197, guid: 5a0a76f8189684847ae7dc71d3cd9f3a, type: 3}
+  - {fileID: 7855534533188619759, guid: d5ed4f6e9dfba7243ae600fb2a8c8137, type: 3}
+  - {fileID: 6556765883199295956, guid: 986c535b863a7ff4ca8188aff71abc31, type: 3}
+  - {fileID: 7504037164559315714, guid: 5e64e3d160266204eb76f315d7d7cc6b, type: 3}
 --- !u!1001 &930306881
 PrefabInstance:
   m_ObjectHideFlags: 0
