@@ -6,6 +6,7 @@ public class animationsMove : MonoBehaviour
 {
     public float movementSpeed = 3;
     public float DestroyTime = 5f;//道具消失的時間
+    public float RotateSpeed = 50f;//旋轉速度
     Animator anim;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class animationsMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        /*float moveHorizontal = Input.GetAxisRaw("Horizontal");
         float moveVertical = Input.GetAxisRaw("Vertical");
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
@@ -26,5 +27,7 @@ public class animationsMove : MonoBehaviour
             anim.SetInteger("Walk", 1);
 
         transform.Translate(movement * movementSpeed * Time.deltaTime, Space.World);
+        */
+        transform.Rotate(Vector3.up*Time.deltaTime*RotateSpeed,Space.World);
     }
 }
