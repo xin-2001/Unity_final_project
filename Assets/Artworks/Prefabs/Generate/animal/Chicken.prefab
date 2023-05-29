@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 9169759183645270697}
   - component: {fileID: 9169759182860160195}
   - component: {fileID: 9169759182860160194}
+  - component: {fileID: 647671706905112903}
   - component: {fileID: 9169759182860160193}
   m_Layer: 0
   m_Name: Chicken
@@ -148,9 +149,22 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.59875804
-  m_Height: 1.8708868
+  m_Height: 1.3004508
   m_Direction: 1
-  m_Center: {x: 0, y: 0.85545915, z: -0.05918026}
+  m_Center: {x: 0, y: 1.1406772, z: -0.05918026}
+--- !u!65 &647671706905112903
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9169759183645113993}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7742261, y: 0.74559784, z: 1.1515656}
+  m_Center: {x: -0.0008857548, y: 1.2938571, z: -0.08256531}
 --- !u!114 &9169759182860160193
 MonoBehaviour:
   m_ObjectHideFlags: 0

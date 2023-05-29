@@ -426,6 +426,7 @@ GameObject:
   - component: {fileID: 5616471766613247034}
   - component: {fileID: 5616471764906388062}
   - component: {fileID: 5616471764906388057}
+  - component: {fileID: 7989687114595813543}
   - component: {fileID: 5616471764906388056}
   m_Layer: 0
   m_Name: Lion
@@ -442,7 +443,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5616471766612957210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.401, y: 1.19, z: -4.09}
+  m_LocalPosition: {x: 0.367, y: 1.19, z: -4.09}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -482,10 +483,23 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.84463656
-  m_Height: 1.6933527
+  m_Radius: 0.783719
+  m_Height: 1.567438
   m_Direction: 1
-  m_Center: {x: 0.19662961, y: 0.7636739, z: 0.212515}
+  m_Center: {x: 0.041504502, y: 1.254201, z: 0.11830727}
+--- !u!65 &7989687114595813543
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5616471766612957210}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.65414137, y: 0.5780514, z: 1.7058635}
+  m_Center: {x: -0.0037803748, y: 0.84682465, z: 0.1784567}
 --- !u!114 &5616471764906388056
 MonoBehaviour:
   m_ObjectHideFlags: 0

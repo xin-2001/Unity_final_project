@@ -343,6 +343,7 @@ GameObject:
   - component: {fileID: 3421079316821583729}
   - component: {fileID: 3421079315796903148}
   - component: {fileID: 3421079315796903149}
+  - component: {fileID: 2859388832962892922}
   - component: {fileID: 3421079315796903147}
   m_Layer: 0
   m_Name: Dog
@@ -401,9 +402,22 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.7629088
-  m_Height: 1.7081853
+  m_Height: 1.5258176
   m_Direction: 1
-  m_Center: {x: 0, y: 0.75253695, z: -0.00033855438}
+  m_Center: {x: 0, y: 1.1843129, z: -0.00033855438}
+--- !u!65 &2859388832962892922
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3421079316821293911}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.711184, y: 1.016118, z: 1.2620354}
+  m_Center: {x: 0.0032126904, y: 1.055901, z: 0.14489365}
 --- !u!114 &3421079315796903147
 MonoBehaviour:
   m_ObjectHideFlags: 0
