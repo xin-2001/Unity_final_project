@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2517247832890988941, guid: 8031db6e128d1294db6982443b9ca620, type: 3}
       propertyPath: m_text
-      value: "\u96E2\u958B\u904A\u622F"
+      value: "\u958B\u59CB\u904A\u622F"
       objectReference: {fileID: 0}
     - target: {fileID: 2517247832890988941, guid: 8031db6e128d1294db6982443b9ca620, type: 3}
       propertyPath: m_fontSize
@@ -453,15 +453,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626687055256791602, guid: 8031db6e128d1294db6982443b9ca620, type: 3}
       propertyPath: m_Color.b
-      value: 0.5283019
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5626687055256791602, guid: 8031db6e128d1294db6982443b9ca620, type: 3}
       propertyPath: m_Color.g
-      value: 0.5283019
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5626687055256791602, guid: 8031db6e128d1294db6982443b9ca620, type: 3}
       propertyPath: m_Color.r
-      value: 0.5283019
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5877569759005704424, guid: 8031db6e128d1294db6982443b9ca620, type: 3}
       propertyPath: m_IsActive
@@ -634,7 +634,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2517247832890988941, guid: 8031db6e128d1294db6982443b9ca620, type: 3}
       propertyPath: m_text
-      value: "\u904A\u622F\u6307\u5F15"
+      value: "\u96E2\u958B\u904A\u622F"
       objectReference: {fileID: 0}
     - target: {fileID: 2517247832890988941, guid: 8031db6e128d1294db6982443b9ca620, type: 3}
       propertyPath: m_fontSize
@@ -1711,7 +1711,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 310f7c9097acb51488043cee75e19022, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 22f19735a2fe5db46a5b642638037226, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2312,7 +2312,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2517247832890988941, guid: 8031db6e128d1294db6982443b9ca620, type: 3}
       propertyPath: m_text
-      value: "\u958B\u59CB\u904A\u622F"
+      value: "\u904A\u622F\u6307\u5F15"
       objectReference: {fileID: 0}
     - target: {fileID: 2517247832890988941, guid: 8031db6e128d1294db6982443b9ca620, type: 3}
       propertyPath: m_fontSize
