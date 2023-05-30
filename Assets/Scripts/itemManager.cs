@@ -67,6 +67,7 @@ public class itemManager : MonoBehaviour
             isMagnet = true;
             //刪除磁鐵
             Destroy(other.gameObject);
+            Invoke("cakeMagent", 5);
         }
         if (other.tag.Equals("ham"))
         {
@@ -74,6 +75,7 @@ public class itemManager : MonoBehaviour
             isStar = true;
             //刪除無敵星星
             Destroy(other.gameObject);
+            Invoke("hamStart", 5);
         }
         if (other.tag.Equals("onigiri"))
         {
@@ -81,6 +83,17 @@ public class itemManager : MonoBehaviour
             isDisappear = true;
             //销毁吸铁石
             Destroy(other.gameObject);
+            Invoke("onigiriDisappear", 5);
         }
+    }
+    private void cakeMagent(){
+        isMagnet = false;
+        //item.GetComponent<peopleMagnet>().isCanMove = false;
+    }
+    private void hamStart(){
+        isStar = false;
+    }
+    private void onigiriDisappear(){
+        isDisappear = false;
     }
 }
