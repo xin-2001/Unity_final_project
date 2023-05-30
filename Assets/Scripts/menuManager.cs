@@ -8,16 +8,23 @@ public class menuManager : MonoBehaviour
     // Start is called before the first frame update
     public GameObject pauseMenu;
     public GameObject inPlayMenu;
-
+    private gameMaster gameMaster;
+    public bool isInGame;
     void Start()
     {
-
+        gameMaster = GameObject.FindObjectOfType<gameMaster>();
     }
+
 
     // Update is called once per frame
     void Update()
     {
-
+        isInGame = gameMaster.isInGame;
+        if (!isInGame)
+        {
+            resultBoard();
+            gameMaster.isInGame = true;
+        }
     }
     public void pauseButtonClicked()
     {
@@ -36,7 +43,7 @@ public class menuManager : MonoBehaviour
     }
     public void GameStart()
     {
-
+        Time.timeScale = 1f;
         Debug.Log("gameStart");
         SceneManager.LoadScene(1);
     }
@@ -55,5 +62,11 @@ public class menuManager : MonoBehaviour
         Debug.Log("return2Menu");
         SceneManager.LoadScene(0);
         Time.timeScale = 1f;
+    }
+    public void resultBoard()
+    {
+        Debug.Log("resultBoard");
+        Time.timeScale = 0f;
+        SceneManager.LoadScene(2);
     }
 }

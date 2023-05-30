@@ -2109,6 +2109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 68979240}
   inPlayMenu: {fileID: 52168896}
+  isInGame: 0
 --- !u!1001 &2094597525
 PrefabInstance:
   m_ObjectHideFlags: 0

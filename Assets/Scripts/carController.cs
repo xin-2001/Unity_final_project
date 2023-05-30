@@ -17,12 +17,14 @@ public class carController : MonoBehaviour
     public int starBuffCount = 0;
     private Vector3 targetPosition; // 目標位置
     private Quaternion targetRotation; // 目標旋轉
+    private gameMaster gameMaster;
     private itemManager itemManager;
     private CharacterController _characterController;
     private void Start()
     {
         //_characterController = GetComponent<CharacterController>();
         itemManager = GameObject.FindObjectOfType<itemManager>();
+        gameMaster = GameObject.FindObjectOfType<gameMaster>();
     }
     private void Update()
     {
@@ -72,10 +74,13 @@ public class carController : MonoBehaviour
             if (currentLocation >= 2)
             {
                 //撞到右邊的牆壁
+                gameMaster.isInGame = false;
+
             }
             else if (currentLocation <= -2)
             {
                 //撞到左邊的牆壁
+                gameMaster.isInGame = false;
             }
 
         }
