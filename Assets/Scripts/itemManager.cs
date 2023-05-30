@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class itemManager : MonoBehaviour
 {
-    //磁鐵在這邊寫
+    //磁鐵、無敵星星在這邊寫
     public bool isMagnet = false;
     public bool isStar = false;
     private carController car;

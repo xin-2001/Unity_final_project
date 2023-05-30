@@ -157,6 +157,8 @@ public class carController : MonoBehaviour
         {
             starBuffCount = 1;
             forwardSpeed = forwardSpeed * 2;
+            Vector3 newScale = transform.localScale * 2.5f;
+            transform.localScale = newScale;
         }
 
     }
@@ -167,6 +169,8 @@ public class carController : MonoBehaviour
         {
             starBuffCount = 0;
             forwardSpeed = forwardSpeed / 2;
+            Vector3 newScale = transform.localScale / 2.5f;
+            transform.localScale = newScale;
         }
 
     }
