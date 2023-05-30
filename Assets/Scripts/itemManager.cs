@@ -24,7 +24,7 @@ public class itemManager : MonoBehaviour
         if (isMagnet)
         {
             //檢測以玩家為球心半徑是5的範圍內的所有的帶有碰撞器的遊戲對象
-            Collider[] colliders = Physics.OverlapSphere(this.transform.position, 2);
+            Collider[] colliders = Physics.OverlapSphere(this.transform.position, 4);
             foreach (var item in colliders)
             {
                 //如果是人
@@ -43,7 +43,7 @@ public class itemManager : MonoBehaviour
         if (isDisappear)
         {
             //检测以玩家为球心半径是5的范围内的所有的带有碰撞器的游戏对象
-            Collider[] colliders = Physics.OverlapSphere(this.transform.position, 3);
+            Collider[] colliders = Physics.OverlapSphere(this.transform.position, 6);
             foreach (var item in colliders)
             {
                 //如果是人
