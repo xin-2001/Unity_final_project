@@ -2,29 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class toolMagnet : MonoBehaviour
+public class itemManager : MonoBehaviour
 {
-    private bool isMagnet = false;
+    //磁鐵在這邊寫
+    public bool isMagnet = false;
+    private carController car;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //如果玩家碰到吸铁石的话 就检测玩家周围的所有带有碰撞器的游戏对象
+        //如果玩家碰到磁鐵的話 就檢測玩家周圍的所有帶有碰撞器的遊戲對象
         if (isMagnet)
         {
-            //检测以玩家为球心半径是5的范围内的所有的带有碰撞器的游戏对象
-            Collider[] colliders = Physics.OverlapSphere(this.transform.position,2);
+            //檢測以玩家為球心半徑是5的範圍內的所有的帶有碰撞器的遊戲對象
+            Collider[] colliders = Physics.OverlapSphere(this.transform.position, 2);
             foreach (var item in colliders)
             {
                 //如果是人
                 if (item.tag.Equals("people"))
                 {
-                    //让金币的开始移动
+                    //讓人開始移動
                     item.GetComponent<peopleMagnet>().isCanMove = true;
                 }
             }
@@ -35,9 +37,9 @@ public class toolMagnet : MonoBehaviour
     {
         if (other.tag.Equals("cake"))
         {
-            //设置玩家可以吸取周围的金币
+            //設置玩家可以吸取周圍的人類
             isMagnet = true;
-            //销毁吸铁石
+            //刪除磁鐵
             Destroy(other.gameObject);
         }
     }

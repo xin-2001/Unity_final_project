@@ -6,6 +6,7 @@ public class obstaclesController : MonoBehaviour
 {
     public UnityEvent<GameObject> OnEnter;
     private carController car;
+    private itemManager itemManager;
     public int location;
     private void OnTriggerEnter(Collider other)
     {

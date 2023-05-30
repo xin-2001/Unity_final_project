@@ -1004,7 +1004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1004687328c41b444a61afe79fe47b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyTime: 211212
+  DestroyTime: 2000
   forwordSpeed: 0.1
 --- !u!136 &732662055
 CapsuleCollider:
