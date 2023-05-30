@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using TMPro;
+
 public class menuManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject pauseMenu;
     public GameObject inPlayMenu;
+    public GameObject scoreBoard;
     private gameMaster gameMaster;
+    public GameObject text1;
     public bool isInGame;
+    public TMP_Text txt;
     void Start()
     {
         gameMaster = GameObject.FindObjectOfType<gameMaster>();
@@ -24,6 +29,13 @@ public class menuManager : MonoBehaviour
         {
             resultBoard();
             gameMaster.isInGame = true;
+        }
+        if (GameObject.Find("gameMenu/scoreboard/point") != null)
+        {
+            //Debug.Log("抓到");
+            text1 = GameObject.Find("gameMenu/scoreboard/point");
+            txt = text1.GetComponent<TMP_Text>();
+            txt.text = gameMaster.score.ToString();
         }
     }
     public void pauseButtonClicked()
@@ -43,6 +55,7 @@ public class menuManager : MonoBehaviour
     }
     public void GameStart()
     {
+        gameMaster.score = 0;
         Time.timeScale = 1f;
         Debug.Log("gameStart");
         SceneManager.LoadScene(1);

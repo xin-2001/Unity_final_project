@@ -1906,7 +1906,7 @@ GameObject:
   - component: {fileID: 1255911592}
   - component: {fileID: 1255911591}
   m_Layer: 5
-  m_Name: Menu
+  m_Name: gameMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1926,6 +1926,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
   inPlayMenu: {fileID: 0}
+  scoreBoard: {fileID: 0}
+  text1: {fileID: 0}
+  isInGame: 0
+  txt: {fileID: 0}
 --- !u!114 &1255911592
 MonoBehaviour:
   m_ObjectHideFlags: 0

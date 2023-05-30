@@ -9,10 +9,11 @@ public class itemManager : MonoBehaviour
     public bool isStar = false;
     private bool isDisappear = false;
     private carController car;
+    private gameMaster gameMaster;
     // Start is called before the first frame update
     void Start()
     {
-
+        gameMaster = GameObject.FindObjectOfType<gameMaster>();
     }
 
     // Update is called once per frame
@@ -61,7 +62,14 @@ public class itemManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.tag);
+        if (other.tag.Equals("people"))
+        {
+            gameMaster.score = gameMaster.score + 1;
+        }
+        if (other.tag.Equals("animal"))
+        {
+            gameMaster.score = gameMaster.score - 1;
+        }
         if (other.tag.Equals("cake"))
         {
             //設置玩家可以吸取周圍的人類

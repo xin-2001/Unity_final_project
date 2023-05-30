@@ -2089,7 +2089,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 68979240}
   inPlayMenu: {fileID: 52168896}
+  scoreBoard: {fileID: 269778077}
+  text1: {fileID: 0}
   isInGame: 0
+  txt: {fileID: 0}
 --- !u!1001 &2094597525
 PrefabInstance:
   m_ObjectHideFlags: 0
