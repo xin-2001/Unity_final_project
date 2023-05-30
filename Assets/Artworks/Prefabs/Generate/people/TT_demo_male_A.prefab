@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 69238537790137760}
   m_Layer: 0
   m_Name: TT_demo_male_A
-  m_TagString: Untagged
+  m_TagString: people
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
