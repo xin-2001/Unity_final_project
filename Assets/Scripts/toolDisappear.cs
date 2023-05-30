@@ -15,7 +15,7 @@ public class toolDisappear : MonoBehaviour
     void Update()
     {
         //如果玩家碰到吸铁石的话 就检测玩家周围的所有带有碰撞器的游戏对象
-        if (isDisappear)
+        /*if (isDisappear)
         {
             //检测以玩家为球心半径是5的范围内的所有的带有碰撞器的游戏对象
             Collider[] colliders = Physics.OverlapSphere(this.transform.position,2);
@@ -29,9 +29,10 @@ public class toolDisappear : MonoBehaviour
                 }
             }
 
-        }
+        }*/
+        transform.Translate(Vector3.forward * Time.deltaTime*0.2f);
     }
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("onigiri"))
         {
@@ -40,5 +41,5 @@ public class toolDisappear : MonoBehaviour
             //销毁吸铁石
             Destroy(other.gameObject);
         }
-    }
+    }*/
 }

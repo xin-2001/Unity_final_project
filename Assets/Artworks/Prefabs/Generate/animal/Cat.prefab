@@ -345,9 +345,10 @@ GameObject:
   - component: {fileID: 3469345353359098251}
   - component: {fileID: 2311586555806295348}
   - component: {fileID: 3469345353359098250}
+  - component: {fileID: -7160505334800195837}
   m_Layer: 0
   m_Name: Cat
-  m_TagString: Untagged
+  m_TagString: animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -429,8 +430,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
-  DestroyTime: 5
+  DestroyTime: 10
   RotateSpeed: 50
+--- !u!114 &-7160505334800195837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3469345354687450553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c68678a6b254cda489ed8c2445857cd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCanMove: 0
+  speed: 5
 --- !u!1 &3469345354687450555
 GameObject:
   m_ObjectHideFlags: 0

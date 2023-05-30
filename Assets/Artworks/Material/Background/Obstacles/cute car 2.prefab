@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 5927388266686254777}
   - component: {fileID: 5309909310182611294}
   - component: {fileID: 6447294100777119507}
+  - component: {fileID: 2360180969273281265}
   m_Layer: 0
   m_Name: cute car 2
   m_TagString: Car
@@ -298,6 +299,20 @@ MonoBehaviour:
   location: 0
   forceMagnitude: 20
   launchDirection: {x: 0, y: 0.70710677, z: 0.70710677}
+--- !u!114 &2360180969273281265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7116611548930888229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47170edcdf9a46245b797ae77179f24e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCanMove: 0
+  speed: 50
 --- !u!1 &7572297146866564590
 GameObject:
   m_ObjectHideFlags: 0

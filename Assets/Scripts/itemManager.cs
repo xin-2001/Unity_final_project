@@ -7,6 +7,7 @@ public class itemManager : MonoBehaviour
     //磁鐵、無敵星星在這邊寫
     public bool isMagnet = false;
     public bool isStar = false;
+    private bool isDisappear = false;
     private carController car;
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,27 @@ public class itemManager : MonoBehaviour
         {
 
         }
+        //如果玩家碰到吸铁石的话 就检测玩家周围的所有带有碰撞器的游戏对象
+        if (isDisappear)
+        {
+            //检测以玩家为球心半径是5的范围内的所有的带有碰撞器的游戏对象
+            Collider[] colliders = Physics.OverlapSphere(this.transform.position,3);
+            foreach (var item in colliders)
+            {
+                //如果是人
+                if (item.tag.Equals("animal"))
+                {
+                    //让動物的开始移动
+                    item.GetComponent<animalDisappear>().isCanMove = true;
+                }
+                if (item.tag.Equals("Car"))
+                {
+                    //让動物的开始移动
+                    item.GetComponent<carDisappear>().isCanMove = true;
+                }
+            }
+
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -51,6 +73,13 @@ public class itemManager : MonoBehaviour
             //設置玩家變成無敵狀態
             isStar = true;
             //刪除無敵星星
+            Destroy(other.gameObject);
+        }
+        if (other.tag.Equals("onigiri"))
+        {
+            //设置玩家可以排斥動物
+            isDisappear = true;
+            //销毁吸铁石
             Destroy(other.gameObject);
         }
     }
