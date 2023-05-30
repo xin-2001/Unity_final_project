@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/dev_car+bg+menu.unity
     guid: a762fc862ecc95d4cad9f98b6a02e8df
+  - enabled: 1
+    path: Assets/Scenes/resultBoard.unity
+    guid: 81ac15451ff9f8b4796b9c6abd31d5d4
   m_configObjects: {}

@@ -1447,8 +1447,7 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -9.659079
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2159243226413184078, guid: f64ece9505810c243aef6802b046ac9f, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f64ece9505810c243aef6802b046ac9f, type: 3}
 --- !u!1 &1493473620
 GameObject:
@@ -1852,25 +1851,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673959203}
   m_CullTransparentMesh: 1
---- !u!1 &1699249264 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6156555890866689844, guid: f64ece9505810c243aef6802b046ac9f, type: 3}
-  m_PrefabInstance: {fileID: 1261621292}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1699249268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699249264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29900e895070e36448bfa090d05d0269, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isMagnet: 0
-  isStar: 0
 --- !u!1 &1889416922
 GameObject:
   m_ObjectHideFlags: 0
