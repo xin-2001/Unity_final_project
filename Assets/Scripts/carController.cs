@@ -28,6 +28,7 @@ public class carController : MonoBehaviour
     }
     private void Update()
     {
+
         // debug
         //Debug.Log(currentLocation);
         // debug

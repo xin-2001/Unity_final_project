@@ -1427,26 +1427,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: basic car gray
       objectReference: {fileID: 0}
-    - target: {fileID: 6156555890866689844, guid: f64ece9505810c243aef6802b046ac9f, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7034432927202122390, guid: f64ece9505810c243aef6802b046ac9f, type: 3}
-      propertyPath: forwardSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7034432927893082893, guid: f64ece9505810c243aef6802b046ac9f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7034432927893082893, guid: f64ece9505810c243aef6802b046ac9f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.0260606
-      objectReference: {fileID: 0}
-    - target: {fileID: 7034432927893082893, guid: f64ece9505810c243aef6802b046ac9f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -9.659079
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f64ece9505810c243aef6802b046ac9f, type: 3}
 --- !u!1 &1493473620

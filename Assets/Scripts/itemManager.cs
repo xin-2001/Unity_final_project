@@ -41,7 +41,7 @@ public class itemManager : MonoBehaviour
         if (isDisappear)
         {
             //检测以玩家为球心半径是5的范围内的所有的带有碰撞器的游戏对象
-            Collider[] colliders = Physics.OverlapSphere(this.transform.position,3);
+            Collider[] colliders = Physics.OverlapSphere(this.transform.position, 3);
             foreach (var item in colliders)
             {
                 //如果是人
@@ -61,6 +61,7 @@ public class itemManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject.tag);
         if (other.tag.Equals("cake"))
         {
             //設置玩家可以吸取周圍的人類
@@ -86,16 +87,19 @@ public class itemManager : MonoBehaviour
             Invoke("onigiriDisappear", 5);
         }
     }
-    private void cakeMagent(){
+    private void cakeMagent()
+    {
         isMagnet = false;
         //item.GetComponent<peopleMagnet>().isCanMove = false;
         Debug.Log("isCakeMagent");
     }
-    private void hamStart(){
+    private void hamStart()
+    {
         isStar = false;
         Debug.Log("isHamStart");
     }
-    private void onigiriDisappear(){
+    private void onigiriDisappear()
+    {
         isDisappear = false;
         Debug.Log("isOnigiriDisappear");
     }
