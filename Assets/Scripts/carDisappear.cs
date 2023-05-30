@@ -27,7 +27,7 @@ public class carDisappear : MonoBehaviour
             {
                 //transform.Rotate(Vector3.up * 0.3f);
                 transform.rotation = Quaternion.Euler(0,0,0);
-                if (transform.position.x >= 1)
+                if (transform.position.x >= 0)
                 {
                     transform.rotation = Quaternion.Euler(0,20,0);
                 }

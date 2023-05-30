@@ -524,6 +524,7 @@ GameObject:
   - component: {fileID: 227299745996145567}
   - component: {fileID: 1385400054385228598}
   - component: {fileID: 5251610093337033248}
+  - component: {fileID: 3466905594680054335}
   m_Layer: 0
   m_Name: taxi
   m_TagString: Car
@@ -610,6 +611,20 @@ MonoBehaviour:
   location: 0
   forceMagnitude: 20
   launchDirection: {x: 0, y: 0.70710677, z: 0.70710677}
+--- !u!114 &3466905594680054335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6980166385970381609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47170edcdf9a46245b797ae77179f24e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCanMove: 0
+  speed: 50
 --- !u!1 &7511810408603171360
 GameObject:
   m_ObjectHideFlags: 0

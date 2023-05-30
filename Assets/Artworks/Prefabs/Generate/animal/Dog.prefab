@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
-  DestroyTime: 10
+  DestroyTime: 999
   RotateSpeed: 50
 --- !u!114 &-4584369048593836319
 MonoBehaviour:

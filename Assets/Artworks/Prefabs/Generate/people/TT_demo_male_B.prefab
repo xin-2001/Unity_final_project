@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1004687328c41b444a61afe79fe47b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyTime: 10
+  DestroyTime: 999
   forwordSpeed: 0.2
 --- !u!1 &2162583875311420673
 GameObject:

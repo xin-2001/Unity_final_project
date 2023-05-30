@@ -198,4 +198,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotateSpeed: 50
-  DestroyTime: 9999
+  DestroyTime: 999
