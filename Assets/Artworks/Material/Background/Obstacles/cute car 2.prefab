@@ -295,6 +295,9 @@ MonoBehaviour:
   OnEnter:
     m_PersistentCalls:
       m_Calls: []
+  location: 0
+  forceMagnitude: 20
+  launchDirection: {x: 0, y: 0.70710677, z: 0.70710677}
 --- !u!1 &7572297146866564590
 GameObject:
   m_ObjectHideFlags: 0

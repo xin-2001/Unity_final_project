@@ -5,21 +5,24 @@ using UnityEngine.Events;
 
 public class carController : MonoBehaviour
 {
-    public int currentLocation = 0;
 
+    [Header("playerMovement")]
+    public int currentLocation = 0;
     public float forwardSpeed; // 向前移動的速度
     public float diagonalSpeed; // 斜向移動的速度
     public float diagonaldebuff; //斜向移動補正
     public float rotationSpeed; // 回正的旋轉速度
-
-    private bool isMovingDiagonal = false; // 是否正在進行斜向移動
+    public bool isMovingDiagonal = false; // 是否正在進行斜向移動
+    [Header("itemCounter")]
+    public int starBuffCount = 0;
     private Vector3 targetPosition; // 目標位置
     private Quaternion targetRotation; // 目標旋轉
-
+    private itemManager itemManager;
     private CharacterController _characterController;
     private void Start()
     {
         //_characterController = GetComponent<CharacterController>();
+        itemManager = GameObject.FindObjectOfType<itemManager>();
     }
     private void Update()
     {
@@ -28,33 +31,41 @@ public class carController : MonoBehaviour
         // debug
         if (currentLocation < 2 && currentLocation > -2)
         {
+            // =================================================================
+            //移動判定
             if (Input.GetKeyDown(KeyCode.A) && !isMovingDiagonal)
             {
-                // 開始斜向移動
-                isMovingDiagonal = true;
-                targetPosition = transform.position + transform.TransformDirection(Vector3.forward + Vector3.left).normalized * diagonalSpeed * diagonaldebuff;
-                targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
-                StartCoroutine(MoveDiagonal());
-
-                currentLocation = currentLocation - 1;
+                turnLeft();
             }
 
             if (Input.GetKeyDown(KeyCode.D) && !isMovingDiagonal)
             {
-                // 開始斜向移動
-                isMovingDiagonal = true;
-                targetPosition = transform.position + transform.TransformDirection(Vector3.forward + Vector3.right).normalized * diagonalSpeed * diagonaldebuff;
-                targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
-                StartCoroutine(MoveDiagonal());
-
-                currentLocation = currentLocation + 1;
+                turnRight();
             }
 
             if (!isMovingDiagonal)
             {
                 // 向前移動
-                transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
+                goStraight();
             }
+            //移動判定
+            // =================================================================
+
+            // =================================================================
+            //道具判定
+
+            if (itemManager.isStar)
+            {
+                starBuff();
+            }
+            else
+            {
+                starDebuff();
+            }
+
+            //道具判定
+            // =================================================================
+
         }
         else
         {
@@ -66,7 +77,9 @@ public class carController : MonoBehaviour
             {
                 //撞到左邊的牆壁
             }
+
         }
+
     }
 
     private IEnumerator MoveDiagonal()
@@ -104,5 +117,57 @@ public class carController : MonoBehaviour
         // 完成斜向移動，回正為向前旋轉
         isMovingDiagonal = false;
     }
+    private void turnLeft()
+    {
+        // 開始斜向移動
+        isMovingDiagonal = true;
+        targetPosition = transform.position + transform.TransformDirection(Vector3.forward + Vector3.left).normalized * diagonalSpeed * diagonaldebuff;
+        targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
+        Debug.Log("targetPosition = " + targetPosition);
+        Debug.Log("targetRotation = " + targetRotation);
+        StartCoroutine(MoveDiagonal());
+        currentLocation = currentLocation - 1;
+    }
+    private void turnRight()
+    {
+        // 開始斜向移動
+        isMovingDiagonal = true;
+        targetPosition = transform.position + transform.TransformDirection(Vector3.forward + Vector3.right).normalized * diagonalSpeed * diagonaldebuff;
+        targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
+        Debug.Log("targetPosition = " + targetPosition);
+        Debug.Log("targetRotation = " + targetRotation);
+        StartCoroutine(MoveDiagonal());
+        currentLocation = currentLocation + 1;
+    }
+    private void goStraight()
+    {
+        transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
+    }
+    private System.Collections.IEnumerator turnRight_delay()
+    {
+        yield return new WaitForSeconds(0.1f);
+        turnRight();
+        // 在這裡寫下要延遲執行的程式碼
+        Debug.Log("Delayed action");
+    }
+    private void starBuff()
+    {
+        //吃到肉的加速度
+        if (itemManager.isStar == true && starBuffCount == 0)
+        {
+            starBuffCount = 1;
+            forwardSpeed = forwardSpeed * 2;
+        }
 
+    }
+    private void starDebuff()
+    {
+        //回歸吃到肉的加速度
+        if (itemManager.isStar == false && starBuffCount == 1)
+        {
+            starBuffCount = 0;
+            forwardSpeed = forwardSpeed / 2;
+        }
+
+    }
 }

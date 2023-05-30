@@ -6,6 +6,7 @@ public class itemManager : MonoBehaviour
 {
     //磁鐵在這邊寫
     public bool isMagnet = false;
+    public bool isStar = false;
     private carController car;
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,9 @@ public class itemManager : MonoBehaviour
                     item.GetComponent<peopleMagnet>().isCanMove = true;
                 }
             }
+        }
+        if (isStar)
+        {
 
         }
     }
@@ -40,6 +44,13 @@ public class itemManager : MonoBehaviour
             //設置玩家可以吸取周圍的人類
             isMagnet = true;
             //刪除磁鐵
+            Destroy(other.gameObject);
+        }
+        if (other.tag.Equals("ham"))
+        {
+            //設置玩家變成無敵狀態
+            isStar = true;
+            //刪除無敵星星
             Destroy(other.gameObject);
         }
     }

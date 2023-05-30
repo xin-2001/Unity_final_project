@@ -22,30 +22,34 @@ public class animalDisappear : MonoBehaviour
         if (isCanMove)
         {
             //向外移動
-            int i=0;
-            if(i==0){
-                if(transform.position.x>=1){
-                    transform.Rotate(Vector3.up * 0.1f );
-                }else{
-                    transform.Rotate(Vector3.up * -0.1f );
+            int i = 0;
+            if (i == 0)
+            {
+                if (transform.position.x >= 1)
+                {
+                    transform.Rotate(Vector3.up * 0.1f);
                 }
-                
-                i=1;
+                else
+                {
+                    transform.Rotate(Vector3.up * -0.1f);
+                }
+
+                i = 1;
             }
-            
+
             transform.Translate(Vector3.forward * Time.deltaTime);
-            Destroy(gameObject,3f);
+            Destroy(gameObject, 3f);
         }
     }
     private void OnTriggerEnter(Collider other)
     {
-        
+
         //如果碰到的物体是玩家
 
         if (other.tag.Equals("Player"))
         {
             //這裡要扣分
-            Destroy(gameObject,1f);
+            Destroy(gameObject, 1f);
         }
     }
 }
