@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class carController : MonoBehaviour
 {
 
+    public int tutorialIndex = -1;
     [Header("playerMovement")]
     public int currentLocation = 0;
     public float forwardSpeed; // 向前移動的速度
@@ -72,13 +73,13 @@ public class carController : MonoBehaviour
         }
         else
         {
-            if (currentLocation >= 2)
+            if (currentLocation >= 2 && tutorialIndex < 0)
             {
                 //撞到右邊的牆壁
                 gameMaster.isInGame = false;
 
             }
-            else if (currentLocation <= -2)
+            else if (currentLocation <= -2 && tutorialIndex < 0)
             {
                 //撞到左邊的牆壁
                 gameMaster.isInGame = false;

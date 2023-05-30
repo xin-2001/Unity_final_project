@@ -12,12 +12,16 @@ public class menuManager : MonoBehaviour
     public GameObject inPlayMenu;
     public GameObject scoreBoard;
     private gameMaster gameMaster;
+    private carController carController;
     public GameObject text1;
     public bool isInGame;
     public TMP_Text txt;
+
+    public GameObject[] mesBox = new GameObject[6];
     void Start()
     {
         gameMaster = GameObject.FindObjectOfType<gameMaster>();
+        if (GameObject.FindObjectOfType<carController>() != null) carController = GameObject.FindObjectOfType<carController>();
     }
 
 
@@ -63,7 +67,7 @@ public class menuManager : MonoBehaviour
     public void Tutorial()
     {
         Debug.Log("tutorial");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
     }
     public void GameQuit()
     {
@@ -72,6 +76,7 @@ public class menuManager : MonoBehaviour
     }
     public void return2Menu()
     {
+        carController.tutorialIndex = -1;
         Debug.Log("return2Menu");
         SceneManager.LoadScene(0);
         Time.timeScale = 1f;
