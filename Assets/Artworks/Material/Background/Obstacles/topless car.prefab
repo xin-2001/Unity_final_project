@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 1602353965546055321}
   - component: {fileID: 3023714816909431425}
   - component: {fileID: 1581941369788640939}
+  - component: {fileID: -8812354258292751809}
   m_Layer: 0
   m_Name: topless car
   m_TagString: Car
@@ -181,6 +182,20 @@ MonoBehaviour:
   location: 0
   forceMagnitude: 20
   launchDirection: {x: 0, y: 0.70710677, z: 0.70710677}
+--- !u!114 &-8812354258292751809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515306163064930527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47170edcdf9a46245b797ae77179f24e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCanMove: 0
+  speed: 50
 --- !u!1 &2176931163582774876
 GameObject:
   m_ObjectHideFlags: 0

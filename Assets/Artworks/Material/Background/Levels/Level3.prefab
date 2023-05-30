@@ -2872,7 +2872,7 @@ MonoBehaviour:
   - {fileID: 6245182866014059842}
   - {fileID: 8379791518351534490}
   - {fileID: 5790328518042284787}
-  spawnTime: 5
+  spawnTime: 20
   Items:
   - {fileID: 2467259983592350052, guid: d558754a919e9f34381d525e385eb6a5, type: 3}
   - {fileID: 7436008903136660998, guid: 4a54ea0ce8c45074f8bd2a7f4c591407, type: 3}
@@ -3053,7 +3053,7 @@ MonoBehaviour:
   - {fileID: 406439808319406133}
   - {fileID: 1582157890973268955}
   - {fileID: 1448767714041986036}
-  spawnTime: 5
+  spawnTime: 20
   Items:
   - {fileID: 2467259983592350052, guid: d558754a919e9f34381d525e385eb6a5, type: 3}
   - {fileID: 7436008903136660998, guid: 4a54ea0ce8c45074f8bd2a7f4c591407, type: 3}
@@ -3110,7 +3110,7 @@ MonoBehaviour:
   - {fileID: 3482300340592081546}
   - {fileID: 548410445556322358}
   - {fileID: 1783307067616614741}
-  spawnTime: 5
+  spawnTime: 20
   Items:
   - {fileID: 2467259983592350052, guid: d558754a919e9f34381d525e385eb6a5, type: 3}
   - {fileID: 7436008903136660998, guid: 4a54ea0ce8c45074f8bd2a7f4c591407, type: 3}
@@ -3322,7 +3322,7 @@ MonoBehaviour:
   - {fileID: 7677337369670952276}
   - {fileID: 3907147782013239970}
   - {fileID: 8984780450036074705}
-  spawnTime: 5
+  spawnTime: 20
   Items:
   - {fileID: 2467259983592350052, guid: d558754a919e9f34381d525e385eb6a5, type: 3}
   - {fileID: 7436008903136660998, guid: 4a54ea0ce8c45074f8bd2a7f4c591407, type: 3}

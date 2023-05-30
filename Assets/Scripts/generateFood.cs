@@ -10,6 +10,9 @@ public class generateFood : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        int spawnIndex = Random.Range(0,SpawnPoints.Length);
+        int ItemIndex = Random.Range(0,Items.Length);
+        Instantiate(Items[ItemIndex],SpawnPoints[spawnIndex].position,SpawnPoints[spawnIndex].rotation);
         InvokeRepeating("SpawnItems",spawnTime,spawnTime);
 
     }
