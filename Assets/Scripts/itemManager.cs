@@ -14,6 +14,7 @@ public class itemManager : MonoBehaviour
     void Start()
     {
         gameMaster = GameObject.FindObjectOfType<gameMaster>();
+        car = GameObject.FindObjectOfType<carController>();
     }
 
     // Update is called once per frame
@@ -68,7 +69,10 @@ public class itemManager : MonoBehaviour
         }
         if (other.tag.Equals("animal"))
         {
-            gameMaster.score = gameMaster.score - 1;
+            if (!isStar)
+            {
+                gameMaster.score = gameMaster.score - 1;
+            }
         }
         if (other.tag.Equals("cake"))
         {
