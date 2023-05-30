@@ -33,5 +33,16 @@ public class peopleMagnet : MonoBehaviour
             //碰到玩家后就会销毁
             Destroy(gameObject,0.1f);
         }
+        if (other.tag.Equals("Car"))
+        {
+            //碰到障礙后就会销毁
+            Destroy(gameObject,0.1f);
+        }
+        if (other.tag.Equals("animal"))
+        {
+            //碰到動物后就会销毁
+            Destroy(gameObject,0.1f);
+        }
+        
     }
 }

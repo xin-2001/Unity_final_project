@@ -51,7 +51,7 @@ public class animalDisappear : MonoBehaviour
         if (other.tag.Equals("Player"))
         {
             //這裡要扣分
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 0.1f);
         }
     }
 }
