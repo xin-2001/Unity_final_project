@@ -89,11 +89,14 @@ public class itemManager : MonoBehaviour
     private void cakeMagent(){
         isMagnet = false;
         //item.GetComponent<peopleMagnet>().isCanMove = false;
+        Debug.Log("isCakeMagent");
     }
     private void hamStart(){
         isStar = false;
+        Debug.Log("isHamStart");
     }
     private void onigiriDisappear(){
         isDisappear = false;
+        Debug.Log("isOnigiriDisappear");
     }
 }
