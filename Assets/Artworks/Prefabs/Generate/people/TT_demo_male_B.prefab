@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 8744487736727891804}
   - component: {fileID: 8744487736727891794}
   - component: {fileID: 8744487736727891795}
+  - component: {fileID: 8478522216337229826}
   - component: {fileID: 8744487736727891793}
   m_Layer: 0
   m_Name: TT_demo_male_B
@@ -166,6 +167,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.2049127, z: 1}
   m_Center: {x: 0, y: 1.192953, z: -0}
+--- !u!114 &8478522216337229826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2162583875311420671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218c55c7faab53c4685e6342052ced71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCanMove: 0
+  speed: 50
 --- !u!114 &8744487736727891793
 MonoBehaviour:
   m_ObjectHideFlags: 0

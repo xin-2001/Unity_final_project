@@ -997,6 +997,7 @@ GameObject:
   - component: {fileID: 2346626830871263829}
   - component: {fileID: 2346626830871263831}
   - component: {fileID: 2346626830871263830}
+  - component: {fileID: -1674209127265021392}
   - component: {fileID: 2346626830871263832}
   m_Layer: 0
   m_Name: TT_demo_police
@@ -1087,6 +1088,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.1919687, z: 1}
   m_Center: {x: 0, y: 1.1060585, z: -0}
+--- !u!114 &-1674209127265021392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6273213396238687586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218c55c7faab53c4685e6342052ced71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCanMove: 0
+  speed: 50
 --- !u!114 &2346626830871263832
 MonoBehaviour:
   m_ObjectHideFlags: 0
