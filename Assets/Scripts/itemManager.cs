@@ -7,7 +7,7 @@ public class itemManager : MonoBehaviour
     //磁鐵、無敵星星在這邊寫
     public bool isMagnet = false;
     public bool isStar = false;
-    private bool isDisappear = false;
+    public bool isDisappear = false;
     private carController car;
     // Start is called before the first frame update
     void Start()
@@ -33,10 +33,7 @@ public class itemManager : MonoBehaviour
                 }
             }
         }
-        if (isStar)
-        {
-
-        }
+        
         //如果玩家碰到吸铁石的话 就检测玩家周围的所有带有碰撞器的游戏对象
         if (isDisappear)
         {
@@ -58,6 +55,10 @@ public class itemManager : MonoBehaviour
             }
 
         }
+        if (isStar)
+        {
+
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -69,14 +70,7 @@ public class itemManager : MonoBehaviour
             Destroy(other.gameObject);
             Invoke("cakeMagent", 5);
         }
-        if (other.tag.Equals("ham"))
-        {
-            //設置玩家變成無敵狀態
-            isStar = true;
-            //刪除無敵星星
-            Destroy(other.gameObject);
-            Invoke("hamStart", 5);
-        }
+        
         if (other.tag.Equals("onigiri"))
         {
             //设置玩家可以排斥動物
@@ -85,18 +79,27 @@ public class itemManager : MonoBehaviour
             Destroy(other.gameObject);
             Invoke("onigiriDisappear", 5);
         }
+        if (other.tag.Equals("ham"))
+        {
+            //設置玩家變成無敵狀態
+            isStar = true;
+            //刪除無敵星星
+            Destroy(other.gameObject);
+            Invoke("hamStart", 5);
+        }
     }
     private void cakeMagent(){
         isMagnet = false;
         //item.GetComponent<peopleMagnet>().isCanMove = false;
         Debug.Log("isCakeMagent");
     }
-    private void hamStart(){
-        isStar = false;
-        Debug.Log("isHamStart");
-    }
+    
     private void onigiriDisappear(){
         isDisappear = false;
         Debug.Log("isOnigiriDisappear");
+    }
+    private void hamStart(){
+        isStar = false;
+        Debug.Log("isHamStart");
     }
 }

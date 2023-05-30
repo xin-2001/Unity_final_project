@@ -39,7 +39,7 @@ public class carDisappear : MonoBehaviour
                 i = 1;
             }
 
-            transform.Translate(Vector3.forward * Time.deltaTime);
+            transform.Translate(Vector3.forward * Time.deltaTime*speed);
             Destroy(gameObject, 2f);
         }
     }
