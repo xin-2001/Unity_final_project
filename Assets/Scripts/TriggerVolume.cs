@@ -13,6 +13,7 @@ public class TriggerVolume : MonoBehaviour
         {
             OnEnter.Invoke(player.gameObject);
             Debug.Log(other.gameObject);
+            Destroy(gameObject);
         }
     }
 }
