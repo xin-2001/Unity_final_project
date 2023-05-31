@@ -5,7 +5,7 @@ using UnityEngine;
 public class generateFood : MonoBehaviour
 {
     public Transform[] SpawnPoints;//生成一個座標陣列
-    public float spawnTime = 9999f;//多久生成
+    //public float spawnTime = 9999f;//多久生成
     public GameObject[] Items;
     // Start is called before the first frame update
     void Start()
@@ -13,7 +13,8 @@ public class generateFood : MonoBehaviour
         int spawnIndex = Random.Range(0,SpawnPoints.Length);
         int ItemIndex = Random.Range(0,Items.Length);
         Instantiate(Items[ItemIndex],SpawnPoints[spawnIndex].position,SpawnPoints[spawnIndex].rotation);
-        InvokeRepeating("SpawnItems",spawnTime,spawnTime);
+        //InvokeRepeating("SpawnItems",spawnTime,spawnTime);
+        InvokeRepeating("SpawnItems",9999f,9999f);
 
     }
 
