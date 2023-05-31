@@ -76,7 +76,7 @@ public class menuManager : MonoBehaviour
     }
     public void return2Menu()
     {
-        carController.tutorialIndex = -1;
+        if (GameObject.FindObjectOfType<carController>() != null) carController.tutorialIndex = -1;
         Debug.Log("return2Menu");
         SceneManager.LoadScene(0);
         Time.timeScale = 1f;
